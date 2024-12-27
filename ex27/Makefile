@@ -6,7 +6,7 @@
 #    By: lposse <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/22 17:01:46 by lposse            #+#    #+#              #
-#    Updated: 2024/12/26 22:23:45 by lposse           ###   ########.fr        #
+#    Updated: 2024/12/27 18:46:28 by lposse           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 PROG=ft_display_file
 SOURCE_DIR=.
 CC=cc
-CFLAGS=-Wall -Wextra -Werror
+CFLAGS= -Wall -Wextra -Werror
 
 SRCS=$(wildcard $(SOURCE_DIR)/*.c)
 
@@ -26,9 +26,10 @@ $(PROG): $(SRCS)
 	chmod +x $@
 
 clean:
-	rm -f $(PROG)
+	rm -f *.o
 
-fclean: clean
+fclean:	clean
+	rm -f $(PROG)
 
 
 .PHONY: all clean fclean
