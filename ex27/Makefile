@@ -6,24 +6,21 @@
 #    By: lposse <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/22 17:01:46 by lposse            #+#    #+#              #
-#    Updated: 2024/12/27 18:46:28 by lposse           ###   ########.fr        #
+#    Updated: 2024/12/27 19:07:19 by lposse           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 PROG=ft_display_file
-SOURCE_DIR=.
 CC=cc
 CFLAGS= -Wall -Wextra -Werror
-
-SRCS=$(wildcard $(SOURCE_DIR)/*.c)
 
 
 all: $(PROG)
 
-$(PROG): $(SRCS)
-	$(CC) $(CFLAGS) $^ -o $@
-	chmod +x $@
+$(PROG): ft_display_file.c
+	$(CC) $(CFLAGS) ft_display_file.c -o ft_display_file
+	chmod +x ft_display_file
 
 clean:
 	rm -f *.o
